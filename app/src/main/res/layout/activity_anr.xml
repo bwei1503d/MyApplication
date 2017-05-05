@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_anr"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/click_anr"
+        android:text="点击就会anr"/>
+    <Button
+        android:id="@+id/click_syout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="点我呀"/>
+
+    <Button
+        android:id="@+id/get_netinfor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="获取网络信息"/>
+
+
+    <Button
+        android:id="@+id/start_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开启wifi"/>
+
+    <Button
+        android:id="@+id/stop_wifi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关闭wifi
+        "/>
+
+    <Button
+        android:id="@+id/unonuithread"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="unonuithread"
+        />
+
+
+
+</LinearLayout>
