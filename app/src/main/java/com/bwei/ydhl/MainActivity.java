@@ -17,6 +17,7 @@ import com.bwei.ydhl.js.JsActivity;
 import com.bwei.ydhl.ketang.httpurlconnectiongetpost.ListActivity;
 import com.bwei.ydhl.multithread.MultiActivity;
 import com.bwei.ydhl.multithread.MultiThreadActivity;
+import com.bwei.ydhl.pull.PullActivity;
 import com.bwei.ydhl.sensor.SensorActivity;
 import com.bwei.ydhl.socket.SocketActivity;
 import com.bwei.ydhl.webservice.WebServiceActivity;
@@ -36,7 +37,7 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(MainActivity.this, ListActivity.class));
+                startActivity(new Intent(MainActivity.this, PullActivity.class));
 
             }
         });

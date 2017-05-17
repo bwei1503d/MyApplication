@@ -5,7 +5,12 @@ import android.os.Bundle;
 import android.util.Xml;
 
 import com.bwei.ydhl.R;
+import com.bwei.ydhl.utils.StringUtils;
+import com.google.gson.JsonArray;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -24,8 +29,21 @@ public class PullActivity extends Activity {
 
         try {
 
-            InputStream inputStream =  getAssets().open("user.xml") ;
-            List<Person> list =  pullXml(inputStream);
+            try {
+                InputStream inputStream =  getAssets().open("data.json") ;
+
+                String content = StringUtils.inputStraemToStringBuffer(inputStream);
+
+//                String content = new String(inputStream.toString().getBytes(),"utf-8");
+
+                JSONArray array = new JSONArray(content);
+
+
+                System.out.println("array = " + array);
+
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
 
 
         } catch (IOException e) {
@@ -61,7 +79,7 @@ public class PullActivity extends Activity {
                         break;
                     case XmlPullParser.START_TAG:
 
-                        if("person".equals(nodeName)){
+                        if("user".equals(nodeName)){
                             String id = pullParser.getAttributeValue(0);
                             person = new Person();
                             person.setId(id);
@@ -77,7 +95,7 @@ public class PullActivity extends Activity {
 
                         break;
                     case XmlPullParser.END_TAG:
-                        if ("person".equals(nodeName)) {
+                        if ("user".equals(nodeName)) {
                             list.add(person);
                             person = null;
                         }

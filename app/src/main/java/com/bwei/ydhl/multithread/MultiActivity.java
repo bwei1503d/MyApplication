@@ -69,10 +69,10 @@ public class MultiActivity extends Activity {
             public void onClick(View v) {
 
                 String path = editText.getText().toString().trim();
-                if(!TextUtils.isEmpty(path)){
-                    multiThread(path);
+//                if(!TextUtils.isEmpty(path)){
+                    multiThread("");
 
-                }
+//                }
 
             }
         });
@@ -91,7 +91,7 @@ public class MultiActivity extends Activity {
 
 
                 int threadsize = 3 ;
-//                String path = "http://10.0.2.2:8080/Bwei/wangyi.apk" ;
+                String path = "http://10.0.2.2:8080/Bwei/wangyi.apk" ;
 
                 try {
 
